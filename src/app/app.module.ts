@@ -1,5 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgxMasonryModule } from 'ngx-masonry';
+import { NguCarouselModule } from '@ngu/carousel';
+
+
+
 
 import { AppComponent } from './app.component';
 
@@ -8,7 +13,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule.withServerTransition({appId: 'my-app'}),
+    NgxMasonryModule,
+    NguCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
